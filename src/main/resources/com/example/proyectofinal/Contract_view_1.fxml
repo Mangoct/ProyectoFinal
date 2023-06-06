@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="480.0" stylesheets="@../../../estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.Contract_controller1">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="78.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_volver" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handler_Volver">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../atras.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="0.0" />
+            <Button fx:id="btn_Añadir" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handler_AñadirContrato" text="Añadir contrato">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../plus_icon-icons.com_61187.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_Borrar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handler_BorrarContrato" text="Borrar contrato">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../cancel_close_delete_exit_logout_remove_x_icon_123217.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox alignment="CENTER" prefHeight="367.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="131.0" prefWidth="210.0">
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../pig-window.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="btn_EnviarPDF" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handler_EnviarPDF" prefHeight="70.0" prefWidth="180.0" text="Enviar PDF   ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../SubirPDF.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btn_GenerarPDF" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handler_GenerarPDF" prefHeight="70.0" prefWidth="180.0" text="Generar PDF">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../BajarPDF.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <TableView fx:id="tabla_Contratos" prefHeight="410.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="col_nContrato" prefWidth="250.0" text="Nº Contrato" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="65.0" prefWidth="668.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="RIGHT" prefHeight="27.0" prefWidth="199.0" text="Vista de contrato nave 1">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="55.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../contract_icon-icons.com_64813.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="305.0" prefWidth="17.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

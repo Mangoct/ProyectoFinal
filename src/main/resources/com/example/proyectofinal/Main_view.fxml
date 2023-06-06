@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="851.0" stylesheets="@../../../estilo.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.Main_controller">
+   <left>
+      <VBox prefHeight="388.0" prefWidth="148.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_Naves" mnemonicParsing="false" onAction="#handler_desplegar" prefHeight="60.0" prefWidth="120.0" text="Naves">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <VBox fx:id="cajaBtn" prefHeight="331.0" prefWidth="133.0">
+               <children>
+                  <Button fx:id="btn_Nave1" mnemonicParsing="false" onAction="#handler_Nave1" prefHeight="60.0" prefWidth="120.0" text="Nave 1">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_Nave2" mnemonicParsing="false" onAction="#handler_nave2" prefHeight="60.0" prefWidth="120.0" text="Nave 2">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btn_Nave3" mnemonicParsing="false" onAction="#handler_Nave3" prefHeight="60.0" prefWidth="120.0" text="Nave 3">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tabla_Generica_Animales" prefHeight="348.0" prefWidth="647.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="col_Dia" prefWidth="84.0" text="Dia" />
+          <TableColumn fx:id="col_Contrato" prefWidth="101.0" text="Nº contrato" />
+            <TableColumn fx:id="col_Cliente" prefWidth="73.0" text="Cliente" />
+            <TableColumn fx:id="col_Nave" prefWidth="51.0" text="Nave" />
+            <TableColumn fx:id="col_Entrada" prefWidth="88.0" text="Entrada" />
+            <TableColumn fx:id="col_Salida" prefWidth="71.0" text="Salida" />
+            <TableColumn fx:id="col_Bajas" prefWidth="79.0" text="Bajas" />
+            <TableColumn fx:id="col_Total" prefWidth="98.0" text="Total" />
+        </columns>
+         <opaqueInsets>
+            <Insets bottom="5.0" top="5.0" />
+         </opaqueInsets>
+      </TableView>
+   </center>
+   <right>
+      <VBox prefHeight="390.0" prefWidth="57.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="851.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../WhatsApp%20Image%202023-04-05%20at%2012.00.04%20PM.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="Control de animales">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" scaleX="-1.0">
+               <image>
+                  <Image url="@../../../WhatsApp%20Image%202023-04-05%20at%2012.00.04%20PM.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="71.0" prefWidth="851.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_salir" mnemonicParsing="false" onAction="#Handler_salir" prefHeight="65.0" prefWidth="137.0" text="Salir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </HBox.margin>
+            </Button>
+            <HBox prefHeight="105.0" prefWidth="588.0">
+               <opaqueInsets>
+                  <Insets bottom="5.0" />
+               </opaqueInsets>
+            </HBox>
+            <Button fx:id="btn_actualizar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Handler_actualizar" prefHeight="54.0" prefWidth="64.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ref.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
